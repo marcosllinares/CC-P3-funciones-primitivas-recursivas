@@ -77,3 +77,34 @@ El programa solicitará la base y el exponente.
 - Rechaza números negativos, decimales y caracteres no numéricos
 - En modo interactivo, solicita nuevamente el valor si es inválido
 - En modo línea de comandos, muestra error y termina
+
+## Contador de Llamadas a Funciones
+
+El programa implementa un sistema de conteo de llamadas para analizar la complejidad computacional:
+
+**Funcionamiento:**
+- Cada función primitiva (Zero, Successor, Projection, Composition, PrimitiveRecursion) mantiene un contador interno
+- Cada vez que se ejecuta el método `evaluate()` de cualquier función, se incrementa su contador
+- Las operaciones compuestas (Composition, PrimitiveRecursion) acumulan:
+  - Sus propias llamadas directas
+  - Las llamadas de todas las subfunciones que invocan
+
+**Ejemplo de conteo para `power(2, 3) = 8`:**
+```
+power(2, 3) llama a:
+  - PrimitiveRecursion (1 llamada)
+    - Para y=0: llama a f (caso base)
+    - Para y=1,2,3: llama a g (paso recursivo) que es mult(x, prev_result)
+      - mult llama a PrimitiveRecursion
+        - Para cada multiplicación: múltiples llamadas a add
+          - add llama a PrimitiveRecursion
+            - Para cada suma: múltiples llamadas a Successor
+```
+
+**Conteo total:**
+El método `getCallCount()` recursivamente suma:
+1. Llamadas propias de la función
+2. Llamadas de todas las funciones que utiliza (composición, recursión)
+3. Llamadas de las funciones primitivas iniciales (Zero, Successor, Projection)
+
+Esto proporciona una medida exacta del número total de evaluaciones de funciones necesarias para calcular el resultado.
