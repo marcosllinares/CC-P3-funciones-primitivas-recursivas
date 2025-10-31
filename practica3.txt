@@ -1,0 +1,38 @@
+Complejidad Computacional
+Curso 2025/26
+
+PRÁCTICA 3: Implementación de Funciones Primitivas Recursivas
+Objetivo
+El objetivo de la práctica consiste en implementar un programa que calcule la
+función potencia(x , y) como una función primitiva recursiva.
+
+Entrega
+La ejecución de la práctica será revisada en la sesión de entrega en el laboratorio.
+
+La entrega se realizará a través del aula virtual:
+○​ Proporcionar el código fuente en su totalidad, incluyendo todos los archivos
+y librerías indispensables para su compilación y ejecución.
+○​ Incluir un archivo README que contenga la información relevante para la
+ejecución y revisión de la práctica.
+Fecha límite de entrega: 31 de octubre de 2025.
+
+Notas de implementación
+La función se define como:
+𝑝𝑜𝑡𝑒𝑛𝑐𝑖𝑎: 𝑁𝑥𝑁 → 𝑁
+(𝑥, 𝑦) → 𝑥
+
+𝑦
+
+Esta función se debe implementar a partir de las funciones recursivas iniciales u
+otras funciones primitivas recursivas definidas utilizando las operaciones de combinación,
+composición y recursión.
+Hay que implementar todas aquellas funciones primitivas recursivas que sean
+necesarias.
+Los valores x,y se pueden pasar como parámetros al programa o leerlos de teclado.
+Como salida se mostrará por pantalla:
+●​ El resultado de la operación
+●​ El número de llamadas a funciones que se hayan realizado
+Se debe realizar un diseño orientado a objetos.
+Lenguajes posibles para la implementación: C++ o Java.
+
+
